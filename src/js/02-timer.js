@@ -56,8 +56,10 @@ refs.startBtn.addEventListener('click', () => {
   }, 1000);
 });
 
+// Calendar picker initialization
 flatpickr(refs.datePicker, options);
 
+// Converter of miliseconds
 function convertMs(ms) {
   // Number of milliseconds per unit of time
   const second = 1000;
@@ -77,6 +79,7 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
+// Convert numbers in right format
 function addLeadingZero(value) {
   return value.toString().padStart(2, '0');
 }
