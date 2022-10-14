@@ -10,7 +10,7 @@ formRef.addEventListener('submit', event => {
 
   let timeDelay = Number(event.target[0].value);
   // Iteration over amount
-  for (i = 1; i <= event.target[2].value; i += 1) {
+  for (let i = 1; i <= event.target[2].value; i += 1) {
     const promise = createPromise(i, timeDelay);
     promise
       .then(value => Notiflix.Notify.success(value))
